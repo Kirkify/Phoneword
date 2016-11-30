@@ -1,4 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Phoneword" x:Class="Phoneword.PhonewordPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Phoneword" 
+		x:Class="Phoneword.PhonewordPage">
+	
+	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="15">
+		<Label Text="Enter a Phoneword" />
+		<Entry x:Name="EnteredNumber" Text="1-855-XAMARIN" />
+		<Button Text="Translate" Clicked="OnTranslate" />
+		<Button x:Name="CallBtn" Clicked="MakeCall" Text="Call" IsEnabled="false" />
+	</StackLayout>
 </ContentPage>
