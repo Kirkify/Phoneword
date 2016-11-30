@@ -18,7 +18,7 @@ namespace Phoneword
 
 			foreach (var item in raw)
 			{
-				if (" -0123456789".Contains(c))
+				if (" -0123456789".Contains(item))
 				{
 					newNumber.Append(item);
 				}
