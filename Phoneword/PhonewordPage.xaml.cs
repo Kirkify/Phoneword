@@ -27,9 +27,11 @@ namespace Phoneword
 			}
 			else
 			{
+				DisplayAlert("Phoneword", "The number entered is unsupported, Please re-enter a number", "OK");
 				CallBtn.IsEnabled = false;
 				EnteredNumber.Text = string.Empty;
 				CallBtn.Text = "Call";
+				EnteredNumber.Focus();
 			}
 		}
 
