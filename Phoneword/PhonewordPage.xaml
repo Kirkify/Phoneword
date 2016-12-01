@@ -9,6 +9,6 @@
 		<Label Text="Enter a Phoneword" />
 		<Entry x:Name="EnteredNumber" Text="1-855-XAMARIN" />
 		<Button Text="Translate" Clicked="OnTranslate" />
-		<Button x:Name="CallBtn" Clicked="MakeCall" Text="Call" IsEnabled="false" />
+		<Button x:Name="CallBtn" Clicked="OnCall" Text="Call" IsEnabled="false" />
 	</StackLayout>
 </ContentPage>

@@ -35,9 +35,20 @@ namespace Phoneword
 			}
 		}
 
-		void MakeCall(object sender, System.EventArgs e)
+		async void OnCall(object sender, System.EventArgs e)
 		{
-			Device.OpenUri(new Uri("tel:" + translatedNumber));
+			if (await this.DisplayAlert(
+				"Dial a Number",
+				"Would you like to call " + translatedNumber + "?",
+				"Yes",
+				"No"))
+			{
+				var dialer = DependencyService.Get<IDialer>();
+				if (dialer != null)
+				{
+					await dialer.DialAsync(translatedNumber);
+				}
+			}
 		}
 	}
 }
