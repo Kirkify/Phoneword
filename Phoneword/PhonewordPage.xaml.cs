@@ -10,10 +10,6 @@ namespace Phoneword
 		public PhonewordPage()
 		{
 			InitializeComponent();
-
-			this.Padding = new Thickness(20,
-										Device.OnPlatform<double>(40, 20, 20), 
-			                             20, 20);
 		}
 
 		void OnTranslate(object sender, System.EventArgs e)
